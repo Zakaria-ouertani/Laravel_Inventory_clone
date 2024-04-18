@@ -57,7 +57,7 @@ body {
   -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
   -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
-  margin-left: 230px;
+  margin-right: 230px;
   z-index: 820;
 }
 .layout-top-nav .content-wrapper,
@@ -195,7 +195,6 @@ a:focus {
   -o-transition: margin-left 0.3s ease-in-out;
   transition: margin-left 0.3s ease-in-out;
   margin-bottom: 0;
-  margin-left: 230px;
   border: none;
   min-height: 50px;
   border-radius: 0;
@@ -411,7 +410,7 @@ a:focus {
 .main-sidebar {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   padding-top: 50px;
   min-height: 100%;
   width: 230px;
@@ -559,7 +558,7 @@ a:focus {
   .sidebar-mini.sidebar-collapse .content-wrapper,
   .sidebar-mini.sidebar-collapse .right-side,
   .sidebar-mini.sidebar-collapse .main-footer {
-    margin-left: 50px !important;
+    margin-right: 50px !important;
     z-index: 840;
   }
   .sidebar-mini.sidebar-collapse .main-sidebar {
@@ -607,9 +606,6 @@ a:focus {
   }
   .sidebar-mini.sidebar-collapse .main-header .logo > .logo-lg {
     display: none;
-  }
-  .sidebar-mini.sidebar-collapse .main-header .navbar {
-    margin-left: 50px;
   }
 }
 @media (min-width: 768px) {

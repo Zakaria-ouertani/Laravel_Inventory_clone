@@ -22,7 +22,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
+                    <th>ال]سم</th>
                     <th>Price</th>
                     <th>Qty.</th>
                     <th>Image</th>
