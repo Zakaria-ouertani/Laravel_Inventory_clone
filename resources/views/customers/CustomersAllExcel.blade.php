@@ -41,6 +41,7 @@
 
 <table id="categories" width="100%">
     <thead>
+
     <tr>
         <td>ID</td>
         <td>Name</td>
@@ -50,12 +51,14 @@
     </thead>
     @foreach($customers as $c)
         <tbody>
-        <tr>
-            <td>{{ $c->id }}</td>
-            <td>{{ $c->nama }}</td>
-            <td>{{ $c->alamat }}</td>
-            <td>{{ $c->email }}</td>
-        </tr>
+        @if (Auth::id() == $c->owner_id)
+            <tr>
+                <td>{{ $c->id }}</td>
+                <td>{{ $c->nama }}</td>
+                <td>{{ $c->alamat }}</td>
+                <td>{{ $c->email }}</td>
+            </tr>
+        @endif
         </tbody>
     @endforeach
 

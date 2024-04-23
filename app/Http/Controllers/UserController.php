@@ -9,7 +9,7 @@ use Excel;
 use Illuminate\Http\Request;
 use PDF;
 use Yajra\DataTables\DataTables;
-
+use Auth;
 class UserController extends Controller {
 	public function __construct() {
 		$this->middleware('role:admin,staff');
@@ -114,7 +114,8 @@ class UserController extends Controller {
 	}
 
 	public function apiUsers() {
-		$users = User::all();
+        $loggedInUserId = Auth::id();
+        $users = User::where('owner_id', $loggedInUserId)->get();
 
 		return Datatables::of($users)
 			->addColumn('action', function ($users) {

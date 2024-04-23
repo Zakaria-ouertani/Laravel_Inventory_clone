@@ -6,6 +6,7 @@ use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use Auth;
 
 class ProductController extends Controller
 {
@@ -20,7 +21,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $category = Category::orderBy('name','ASC')
+        $category = Category::where('owner_id', Auth::id())
+            ->orderBy('name','ASC')
             ->get()
             ->pluck('name','id');
 
@@ -60,7 +62,7 @@ class ProductController extends Controller
 
         $input = $request->all();
         $input['image'] = null;
-
+        $input['owner_id'] = Auth::id();
         if ($request->hasFile('image')){
             $input['image'] = '/upload/products/'.str_slug($input['nama'], '-').'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('/upload/products/'), $input['image']);
@@ -166,7 +168,8 @@ class ProductController extends Controller
     }
 
     public function apiProducts(){
-        $product = Product::all();
+        $loggedInUserId = Auth::id();
+        $product = Product::where('owner_id', $loggedInUserId)->get();
 
         return Datatables::of($product)
             ->addColumn('category_name', function ($product){

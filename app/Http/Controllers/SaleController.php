@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use Excel;
 use PDF;
-
+use Auth;
 
 class SaleController extends Controller
 {
@@ -54,7 +54,9 @@ class SaleController extends Controller
             'telepon'   => 'required',
         ]);
 
-        Sale::create($request->all());
+        $saleData = $request->all();
+        $saleData['owner_id'] = Auth::id();
+        Sale::create($saleData);
 
         return response()->json([
             'success'    => true,
@@ -130,7 +132,8 @@ class SaleController extends Controller
 
     public function apiSales()
     {
-        $sales = Sale::all();
+        $loggedInUserId = Auth::id();
+        $sales = Sale::where('owner_id', $loggedInUserId)->get();
 
         return Datatables::of($sales)
             ->addColumn('action', function($sales){

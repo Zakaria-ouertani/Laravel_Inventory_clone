@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Customer;
 use App\Exports\ExportCustomers;
 use App\Imports\CustomersImport;
 use Illuminate\Http\Request;
+use Auth;
 use Yajra\DataTables\DataTables;
 use Excel;
 use PDF;
@@ -52,8 +52,9 @@ class CustomerController extends Controller
             'email'     => 'required|unique:customers',
             'telepon'   => 'required',
         ]);
-
-        Customer::create($request->all());
+        $customer_data = $request->all();
+        $customer_data["owner_id"] = Auth::user()->id;
+        Customer::create($customer_data);
 
         return response()->json([
             'success'    => true,
@@ -129,7 +130,8 @@ class CustomerController extends Controller
 
     public function apiCustomers()
     {
-        $customer = Customer::all();
+        $loggedInUserId = Auth::id();
+        $customer = Customer::where('owner_id', $loggedInUserId)->get();
 
         return Datatables::of($customer)
             ->addColumn('action', function($customer){

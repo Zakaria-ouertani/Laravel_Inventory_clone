@@ -49,14 +49,16 @@
     </tr>
     </thead>
     @foreach($customers as $c)
-        <tbody>
-        <tr>
-            <td>{{ $c->id }}</td>
-            <td>{{ $c->nama }}</td>
-            <td>{{ $c->alamat }}</td>
-            <td>{{ $c->email }}</td>
-        </tr>
-        </tbody>
+        @if (Auth::id() == $c->owner_id)
+            <tbody>
+            <tr>
+                <td>{{ $c->id }}</td>
+                <td>{{ $c->nama }}</td>
+                <td>{{ $c->alamat }}</td>
+                <td>{{ $c->email }}</td>
+            </tr>
+            </tbody>
+        @endif
     @endforeach
 
 </table>

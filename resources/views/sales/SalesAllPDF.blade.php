@@ -49,14 +49,16 @@
     </tr>
     </thead>
     @foreach($sales as $s)
-        <tbody>
-        <tr>
-            <td>{{ $s->id }}</td>
-            <td>{{ $s->nama }}</td>
-            <td>{{ $s->alamat }}</td>
-            <td>{{ $s->email }}</td>
-        </tr>
-        </tbody>
+        @if (Auth::id() == $s->owner_id)
+            <tbody>
+            <tr>
+                <td>{{ $s->id }}</td>
+                <td>{{ $s->nama }}</td>
+                <td>{{ $s->alamat }}</td>
+                <td>{{ $s->email }}</td>
+            </tr>
+            </tbody>
+        @endif
     @endforeach
 
 </table>

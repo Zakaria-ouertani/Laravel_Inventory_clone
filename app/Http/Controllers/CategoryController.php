@@ -7,6 +7,7 @@ use App\Exports\ExportCategories;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Datatables;
 use PDF;
+use Auth;
 
 class CategoryController extends Controller
 {
@@ -47,7 +48,9 @@ class CategoryController extends Controller
            'name'   => 'required|string|min:2'
         ]);
 
-        Category::create($request->all());
+        $categoryData = $request->all();
+        $categoryData['owner_id'] = Auth::id();
+        Category::create($categoryData);
 
         return response()->json([
            'success'    => true,
@@ -119,7 +122,9 @@ class CategoryController extends Controller
 
     public function apiCategories()
     {
-        $categories = Category::all();
+        
+        $loggedInUserId = Auth::id();
+        $categories = Category::where('owner_id', $loggedInUserId)->get();
 
         return Datatables::of($categories)
             ->addColumn('action', function($categories){

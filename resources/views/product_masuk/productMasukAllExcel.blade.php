@@ -50,15 +50,17 @@
         </tr>
         </thead>
         @foreach($product_masuk as $p)
-            <tbody>
-            <tr>
-                <td>{{ $p->id }}</td>
-                <td>{{ $p->product->nama }}</td>
-                <td>{{ $p->supplier->nama }}</td>
-                <td>{{ $p->qty }}</td>
-                <td>{{ $p->tanggal }}</td>
-            </tr>
-            </tbody>
+            @if (Auth::id() == $p->owner_id)
+                <tbody>
+                <tr>
+                    <td>{{ $p->id }}</td>
+                    <td>{{ $p->product->nama }}</td>
+                    <td>{{ $p->supplier->nama }}</td>
+                    <td>{{ $p->qty }}</td>
+                    <td>{{ $p->tanggal }}</td>
+                </tr>
+                </tbody>
+            @endif
         @endforeach
 
     </table>

@@ -9,7 +9,7 @@ use Excel;
 use Illuminate\Http\Request;
 use PDF;
 use Yajra\DataTables\DataTables;
-
+use Auth;
 class SupplierController extends Controller {
 	public function __construct() {
 		$this->middleware('role:admin,staff');
@@ -46,9 +46,9 @@ class SupplierController extends Controller {
 			'email' => 'required|unique:suppliers',
 			'telepon' => 'required',
 		]);
-
-		Supplier::create($request->all());
-
+        $supplierData = $request->all();
+        $supplierData['owner_id'] = Auth::id();
+        Supplier::create($supplierData);
 		return response()->json([
 			'success' => true,
 			'message' => 'Suppliers Created',
@@ -118,7 +118,8 @@ class SupplierController extends Controller {
 	}
 
 	public function apiSuppliers() {
-		$suppliers = Supplier::all();
+        $loggedInUserId = Auth::id();
+        $suppliers = Supplier::where('owner_id', $loggedInUserId)->get();
 
 		return Datatables::of($suppliers)
 			->addColumn('action', function ($suppliers) {

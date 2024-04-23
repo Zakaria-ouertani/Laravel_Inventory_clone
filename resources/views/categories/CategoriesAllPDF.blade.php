@@ -47,12 +47,14 @@
     </tr>
     </thead>
     @foreach($categories as $c)
-        <tbody>
-        <tr>
-            <td>{{ $c->id }}</td>
-            <td>{{ $c->name }}</td>
-        </tr>
-        </tbody>
+        @if (Auth::id() == $c->owner_id)
+            <tbody>
+            <tr>
+                <td>{{ $c->id }}</td>
+                <td>{{ $c->name }}</td>
+            </tr>
+            </tbody>
+        @endif
     @endforeach
 
 </table>

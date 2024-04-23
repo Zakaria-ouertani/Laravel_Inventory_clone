@@ -7,6 +7,7 @@
 <!-- Small boxes (Stat box) -->
 <div class="row">
     <!-- Log on to codeastro.com for more projects! -->
+    @if (Auth::id() == '1')
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-aqua">
@@ -21,6 +22,7 @@
             <a href="/user" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
+    @endif
     <!-- ./col -->
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->

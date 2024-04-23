@@ -36,10 +36,12 @@
             <li><a href="{{ route('products.index') }}"><i class="fa fa-cubes"></i> <span>المنتجات</span></a></li>
             <li><a href="{{ route('customers.index') }}"><i class="fa fa-users"></i> <span>الزبون</span></a></li>
             <!-- <li><a href="{{ route('sales.index') }}"><i class="fa fa-cart-plus"></i> <span>Penjualan</span></a></li> -->
-            <li><a href="{{ route('suppliers.index') }}"><i class="fa fa-truck"></i> <span>المورد</span></a></li>
+            <li><a href="{{ route('suppliers.index') }}"><i class="fa fa-truck"></i> <span>المزود</span></a></li>
             <li><a href="{{ route('productsOut.index') }}"><i class="fa fa-minus"></i> <span>المبيعات</span></a></li>
             <li><a href="{{ route('productsIn.index') }}"><i class="fa fa-cart-plus"></i> <span>المشتريات</span></a></li>
-            <li><a href="{{ route('user.index') }}"><i class="fa fa-user-secret"></i> <span>System Users</span></a></li>
+            @if (Auth::id() == '1')
+                <li><a href="{{ route('user.index') }}"><i class="fa fa-user-secret"></i> <span>System Users</span></a></li>
+            @endif
         </ul>
         <!-- /.sidebar-menu -->
     </section>

@@ -10,7 +10,7 @@ use App\Product_Keluar;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use PDF;
-
+use Auth;
 
 class ProductKeluarController extends Controller
 {
@@ -25,15 +25,17 @@ class ProductKeluarController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('nama','ASC')
+        $products = Product::where('owner_id', Auth::id())
+            ->orderBy('nama','ASC')
             ->get()
             ->pluck('nama','id');
 
-        $customers = Customer::orderBy('nama','ASC')
+        $customers = Customer::where('owner_id', Auth::id())
+            ->orderBy('nama','ASC')
             ->get()
             ->pluck('nama','id');
 
-        $invoice_data = Product_Keluar::all();
+        $invoice_data = Product_Keluar::where('owner_id', Auth::id())->get();
         return view('product_keluar.index', compact('products','customers', 'invoice_data'));
     }
 
@@ -59,10 +61,12 @@ class ProductKeluarController extends Controller
            'product_id'     => 'required',
            'customer_id'    => 'required',
            'qty'            => 'required',
-           'tanggal'           => 'required'
+           'tanggal'        => 'required'
         ]);
 
-        Product_Keluar::create($request->all());
+        $exportData = $request->all();
+        $exportData['owner_id'] = Auth::id();
+        Product_Keluar::create($exportData);
 
         $product = Product::findOrFail($request->product_id);
         $product->qty -= $request->qty;
