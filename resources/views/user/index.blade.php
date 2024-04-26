@@ -24,8 +24,8 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>الاسم</th>
+                    <th>بريد إلكتروني</th>
                     <th>Role</th>
                     <th>Actions</th>
                 </tr>
@@ -64,6 +64,9 @@
 
     <script type="text/javascript">
         var table = $('#user-table').DataTable({
+            language: {
+                url: 'DataTables_ar.json'
+            },
             processing: true,
             serverSide: true,
             ajax: "{{ route('api.users') }}",

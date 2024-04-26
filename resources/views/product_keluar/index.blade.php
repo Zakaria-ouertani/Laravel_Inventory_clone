@@ -20,8 +20,8 @@
 
         <div class="box-header">
             <a onclick="addForm()" class="btn btn-success" ><i class="fa fa-plus"></i> Add New Outgoing Product</a>
-            <a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger"><i class="fa fa-file-pdf-o"></i> Export PDF</a>
-            <a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-primary"><i class="fa fa-file-excel-o"></i> Export Excel</a>
+            <a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger"><i class="fa fa-file-pdf-o"></i> <th>تحميل PDF</th></a>
+            <a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-primary"><i class="fa fa-file-excel-o"></i> <th>تحميل اكسل</th></a>
         </div>
 
         <!-- /.box-header -->
@@ -30,10 +30,10 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Products</th>
-                    <th>Customer</th>
-                    <th>Qty.</th>
-                    <th>Date</th>
+                    <th>المزود</th>
+                    <th>الزبون</th>
+                    <th>الكمية</th>
+                    <th>التاريخ</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -48,13 +48,13 @@
     <div class="box box-success col-md-6">
 
         <div class="box-header">
-            <h3 class="box-title">Export Invoice</h3>
+            <h3 class="box-title">تصدير الفواتير</h3>
         </div>
 
         {{--<div class="box-header">--}}
             {{--<a onclick="addForm()" class="btn btn-primary" >Add Products Out</a>--}}
-            {{--<a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger">Export PDF</a>--}}
-            {{--<a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success">Export Excel</a>--}}
+            {{--<a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger"><th>تحميل PDF</th></a>--}}
+            {{--<a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success"><th>تحميل اكسل</th></a>--}}
         {{--</div>--}}
 
         <!-- /.box-header -->
@@ -63,10 +63,10 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Products</th>
-                    <th>Customer</th>
-                    <th>Qty.</th>
-                    <th>Date</th>
+                    <th>المزود</th>
+                    <th>الزبون</th>
+                    <th>الكمية</th>
+                    <th>التاريخ</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -79,7 +79,7 @@
                         <td>{{ $i->qty }}</td>
                         <td>{{ $i->tanggal }}</td>
                         <td>
-                            <a href="{{ route('exportPDF.productKeluar', [ 'id' => $i->id ]) }}" class="btn btn-sm btn-danger">Export Invoice</a>
+                            <a href="{{ route('exportPDF.productKeluar', [ 'id' => $i->id ]) }}" class="btn btn-sm btn-danger">تصدير الفاتورة</a>
                         </td>
                     </tbody>
                 @endforeach
@@ -154,6 +154,9 @@
 
     <script type="text/javascript">
         var table = $('#products-out-table').DataTable({
+            language: {
+                url: 'DataTables_ar.json'
+            },
             processing: true,
             serverSide: true,
             ajax: "{{ route('api.productsOut') }}",

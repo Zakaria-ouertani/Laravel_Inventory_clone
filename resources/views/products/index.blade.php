@@ -23,10 +23,10 @@
                 <tr>
                     <th>ID</th>
                     <th>ال]سم</th>
-                    <th>Price</th>
-                    <th>Qty.</th>
-                    <th>Image</th>
-                    <th>Category</th>
+                    <th>الثمن</th>
+                    <th>الكمية</th>
+                    <th>الصور</th>
+                    <th>الفئة</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -65,6 +65,9 @@
 
     <script type="text/javascript">
         var table = $('#products-table').DataTable({
+            language: {
+                url: 'DataTables_ar.json'
+            },
             processing: true,
             serverSide: true,
             ajax: "{{ route('api.products') }}",

@@ -15,9 +15,9 @@
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-success" ><i class="fa fa-plus"></i> Add a New Category</a>
-            <a href="{{ route('exportPDF.categoriesAll') }}" class="btn btn-danger"><i class="fa fa-file-pdf-o"></i> Export PDF</a>
-            <a href="{{ route('exportExcel.categoriesAll') }}" class="btn btn-primary"><i class="fa fa-file-excel-o"></i> Export Excel</a>
+            <a onclick="addForm()" class="btn btn-success" >اضافة فئة <i class="fa fa-plus"></i></a>
+            <a href="{{ route('exportPDF.categoriesAll') }}" class="btn btn-danger"><th>تحميل PDF</th> <i class="fa fa-file-pdf-o"></i></a>
+            <a href="{{ route('exportExcel.categoriesAll') }}" class="btn btn-primary"> <th>تحميل اكسل</th> <i class="fa fa-file-excel-o"></i></a>
         </div>
 
 
@@ -27,7 +27,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
+                    <th>الاسم</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -66,6 +66,9 @@
 
     <script type="text/javascript">
         var table = $('#categories-table').DataTable({
+            language: {
+                url: 'DataTables_ar.json'
+            }, 
             processing: true,
             serverSide: true,
             ajax: "{{ route('api.categories') }}",

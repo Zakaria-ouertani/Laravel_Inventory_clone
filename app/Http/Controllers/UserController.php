@@ -12,7 +12,7 @@ use Yajra\DataTables\DataTables;
 use Auth;
 class UserController extends Controller {
 	public function __construct() {
-		$this->middleware('role:admin,staff');
+		$this->middleware('role:admin');
 	}
 	/**
 	 * Display a listing of the resource.
@@ -115,12 +115,12 @@ class UserController extends Controller {
 
 	public function apiUsers() {
         $loggedInUserId = Auth::id();
-        $users = User::where('owner_id', $loggedInUserId)->get();
+        $users = User::all();
 
 		return Datatables::of($users)
 			->addColumn('action', function ($users) {
-				return '<a onclick="editForm(' . $users->id . ')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
-				'<a onclick="deleteData(' . $users->id . ')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+				return '<a onclick="editForm(' . $users->id . ')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> تحديث</a> ' .
+				'<a onclick="deleteData(' . $users->id . ')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> الحذف</a>';
 			})
 			->rawColumns(['action'])->make(true);
 	}

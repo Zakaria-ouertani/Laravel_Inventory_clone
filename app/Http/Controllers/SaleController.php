@@ -137,8 +137,8 @@ class SaleController extends Controller
 
         return Datatables::of($sales)
             ->addColumn('action', function($sales){
-                return'<a onclick="editForm('. $sales->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
-                    '<a onclick="deleteData('. $sales->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+                return'<a onclick="editForm('. $sales->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> تحديث</a> ' .
+                    '<a onclick="deleteData('. $sales->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> الحذف</a>';
             })
             ->rawColumns(['action'])->make(true);
     }

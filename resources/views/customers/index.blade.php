@@ -17,8 +17,8 @@
 
         <div class="box-header">
             <a onclick="addForm()" class="btn btn-success" ><i class="fa fa-plus"></i> Add Customers</a>
-            <a href="{{ route('exportPDF.customersAll') }}" class="btn btn-danger"><i class="fa fa-file-pdf-o"></i> Export PDF</a>
-            <a href="{{ route('exportExcel.customersAll') }}" class="btn btn-primary"><i class="fa fa-file-excel-o"></i> Export Excel</a>
+            <a href="{{ route('exportPDF.customersAll') }}" class="btn btn-danger"><i class="fa fa-file-pdf-o"></i> <th>تحميل PDF</th></a>
+            <a href="{{ route('exportExcel.customersAll') }}" class="btn btn-primary"><i class="fa fa-file-excel-o"></i> <th>تحميل اكسل</th></a>
         </div>
 
 
@@ -28,10 +28,10 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Email</th>
-                    <th>Contact</th>
+                    <th>الاسم</th>
+                    <th>العنوان</th>
+                    <th>بريد إلكتروني</th>
+                    <th>رقم الهاتف</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -74,6 +74,9 @@
 
     <script type="text/javascript">
         var table = $('#customer-table').DataTable({
+            language: {
+                url: 'DataTables_ar.json'
+            },
             processing: true,
             serverSide: true,
             ajax: "{{ route('api.customers') }}",

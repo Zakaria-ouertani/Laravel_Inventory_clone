@@ -15,8 +15,8 @@
 
         <div class="box-header">
             <a onclick="addForm()" class="btn btn-primary" >Add Customers</a>
-            <a href="{{ route('exportPDF.salesAll') }}" class="btn btn-danger">Export PDF</a>
-            <a href="{{ route('exportExcel.salesAll') }}" class="btn btn-success">Export Excel</a>
+            <a href="{{ route('exportPDF.salesAll') }}" class="btn btn-danger"><th>تحميل PDF</th></a>
+            <a href="{{ route('exportExcel.salesAll') }}" class="btn btn-success"><th>تحميل اكسل</th></a>
         </div>
 
 
@@ -26,9 +26,9 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Email</th>
+                    <th>الاسم</th>
+                    <th>العنوان</th>
+                    <th>بريد إلكتروني</th>
                     <th>Phone</th>
                     <th></th>
                 </tr>
@@ -70,6 +70,9 @@
 
     <script type="text/javascript">
         var table = $('#sales-table').DataTable({
+            language: {
+                url: 'DataTables_ar.json'
+            },
             processing: true,
             serverSide: true,
             ajax: "{{ route('api.sales') }}",
