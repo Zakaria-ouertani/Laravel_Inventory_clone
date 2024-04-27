@@ -10,9 +10,11 @@
     <div class="box box-success">
 
         <div class="box-header">
-            <h3 class="box-title">List of Products</h3>
+            <h3 class="box-title">قائمة المنتجات</h3>
+        </div>
 
-            <a onclick="addForm()" class="btn btn-success pull-right" style="margin-top: -8px;"><i class="fa fa-plus"></i> Add Products</a>
+        <div class="box-header">
+            <a onclick="addForm()" class="btn btn-success pull-right" style="margin-top: -8px;"><i class="fa fa-plus"></i> اظافة منتوج</a>
         </div>
 
 
@@ -49,19 +51,6 @@
     {{-- Validator --}}
     <script src="{{ asset('assets/validator/validator.min.js') }}"></script>
 
-    {{--<script>--}}
-    {{--$(function () {--}}
-    {{--$('#items-table').DataTable()--}}
-    {{--$('#example2').DataTable({--}}
-    {{--'paging'      : true,--}}
-    {{--'lengthChange': false,--}}
-    {{--'searching'   : false,--}}
-    {{--'ordering'    : true,--}}
-    {{--'info'        : true,--}}
-    {{--'autoWidth'   : false--}}
-    {{--})--}}
-    {{--})--}}
-    {{--</script>--}}
 
     <script type="text/javascript">
         var table = $('#products-table').DataTable({

@@ -15,7 +15,7 @@
     <div class="box box-success">
 
         <div class="box-header">
-            <h3 class="box-title">Outgoing List</h3>
+            <h3 class="box-title">قائمة المبيعات</h3>
         </div>
 
         <div class="box-header">
@@ -119,6 +119,9 @@
     $(function () {
     // $('#items-table').DataTable()
     $('#invoice').DataTable({
+    language: {
+        url: 'DataTables_ar.json'
+    },
     'paging'      : true,
     'lengthChange': false,
     'searching'   : false,

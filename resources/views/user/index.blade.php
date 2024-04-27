@@ -14,7 +14,7 @@
         </div>
 
         <div class="box-header">
-            <a href="/register" class="btn btn-success" ><i class="fa fa-plus"></i> Add User</a>
+            <a href="/register" class="btn btn-success" ><i class="fa fa-plus"></i> اظافة مستعمل</a>
         </div>
 
 
@@ -48,19 +48,6 @@
     {{-- Validator --}}
     <script src="{{ asset('assets/validator/validator.min.js') }}"></script>
 
-    {{--<script>--}}
-    {{--$(function () {--}}
-    {{--$('#items-table').DataTable()--}}
-    {{--$('#example2').DataTable({--}}
-    {{--'paging'      : true,--}}
-    {{--'lengthChange': false,--}}
-    {{--'searching'   : false,--}}
-    {{--'ordering'    : true,--}}
-    {{--'info'        : true,--}}
-    {{--'autoWidth'   : false--}}
-    {{--})--}}
-    {{--})--}}
-    {{--</script>--}}
 
     <script type="text/javascript">
         var table = $('#user-table').DataTable({

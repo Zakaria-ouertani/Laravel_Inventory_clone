@@ -15,7 +15,7 @@
     <div class="box box-success">
 
         <div class="box-header">
-            <h3 class="box-title">Purchase Products List</h3>
+            <h3 class="box-title">قائمة المشتريات</h3>
 
 
         </div>
@@ -118,19 +118,24 @@
     {{-- Validator --}}
     <script src="{{ asset('assets/validator/validator.min.js') }}"></script>
 
-    {{--<script>--}}
-    {{--$(function () {--}}
-    {{--$('#items-table').DataTable()--}}
-    {{--$('#example2').DataTable({--}}
-    {{--'paging'      : true,--}}
-    {{--'lengthChange': false,--}}
-    {{--'searching'   : false,--}}
-    {{--'ordering'    : true,--}}
-    {{--'info'        : true,--}}
-    {{--'autoWidth'   : false--}}
-    {{--})--}}
-    {{--})--}}
-    {{--</script>--}}
+    <script>
+    $(function () {
+    // $('#items-table').DataTable()
+    $('#invoice').DataTable({
+    language: {
+        url: 'DataTables_ar.json'
+    },
+    'paging'      : true,
+    'lengthChange': false,
+    'searching'   : false,
+    'ordering'    : true,
+    'info'        : true,
+    'autoWidth'   : false,
+    'processing'  : true,
+    // 'serverSide'  : true
+    })
+    })
+    </script>
 
     <script>
         $(function () {

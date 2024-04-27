@@ -14,8 +14,8 @@
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Add Customers</a>
-            <a href="{{ route('exportPDF.salesAll') }}" class="btn btn-danger"><th>تحميل PDF</th></a>
+            <a onclick="addForm()" class="btn btn-primary" >اظافة زبون</a>
+            <a href="{{ route('exportPDF.salesAll') }}" class="btn btn-danger"><th> تحميل PDF</th></a>
             <a href="{{ route('exportExcel.salesAll') }}" class="btn btn-success"><th>تحميل اكسل</th></a>
         </div>
 
@@ -54,19 +54,6 @@
     {{-- Validator --}}
     <script src="{{ asset('assets/validator/validator.min.js') }}"></script>
 
-    {{--<script>--}}
-    {{--$(function () {--}}
-    {{--$('#items-table').DataTable()--}}
-    {{--$('#example2').DataTable({--}}
-    {{--'paging'      : true,--}}
-    {{--'lengthChange': false,--}}
-    {{--'searching'   : false,--}}
-    {{--'ordering'    : true,--}}
-    {{--'info'        : true,--}}
-    {{--'autoWidth'   : false--}}
-    {{--})--}}
-    {{--})--}}
-    {{--</script>--}}
 
     <script type="text/javascript">
         var table = $('#sales-table').DataTable({

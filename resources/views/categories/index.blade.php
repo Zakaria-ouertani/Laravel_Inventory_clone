@@ -11,11 +11,11 @@
     <div class="box box-success">
 
         <div class="box-header">
-            <h3 class="box-title">List of Categories</h3>
+            <h3 class="box-title">قائمة الفئات</h3>
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-success" >اضافة فئة <i class="fa fa-plus"></i></a>
+            <a onclick="addForm()" class="btn btn-success" > اضافة فئة<i class="fa fa-plus"></i></a>
             <a href="{{ route('exportPDF.categoriesAll') }}" class="btn btn-danger"><th>تحميل PDF</th> <i class="fa fa-file-pdf-o"></i></a>
             <a href="{{ route('exportExcel.categoriesAll') }}" class="btn btn-primary"> <th>تحميل اكسل</th> <i class="fa fa-file-excel-o"></i></a>
         </div>
@@ -50,19 +50,6 @@
     {{-- Validator --}}
     <script src="{{ asset('assets/validator/validator.min.js') }}"></script>
 
-    {{--<script>--}}
-    {{--$(function () {--}}
-    {{--$('#items-table').DataTable()--}}
-    {{--$('#example2').DataTable({--}}
-    {{--'paging'      : true,--}}
-    {{--'lengthChange': false,--}}
-    {{--'searching'   : false,--}}
-    {{--'ordering'    : true,--}}
-    {{--'info'        : true,--}}
-    {{--'autoWidth'   : false--}}
-    {{--})--}}
-    {{--})--}}
-    {{--</script>--}}
 
     <script type="text/javascript">
         var table = $('#categories-table').DataTable({
