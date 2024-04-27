@@ -40,7 +40,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">ارسال</button>
                 </div>
 
                 <div class="box-body">

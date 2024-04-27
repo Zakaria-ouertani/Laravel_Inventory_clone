@@ -23,13 +23,13 @@
             <table id="products-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>المعرف</th>
                     <th>ال]سم</th>
                     <th>الثمن</th>
                     <th>الكمية</th>
                     <th>الصور</th>
                     <th>الفئة</th>
-                    <th>Actions</th>
+                    <th>العمليات</th>
                 </tr>
                 </thead>
                 <tbody></tbody>

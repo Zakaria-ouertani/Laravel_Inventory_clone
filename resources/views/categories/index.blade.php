@@ -26,9 +26,9 @@
             <table id="categories-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>المعرف</th>
                     <th>الاسم</th>
-                    <th>Action</th>
+                    <th>العمليات</th>
                 </tr>
                 </thead>
                 <tbody></tbody>

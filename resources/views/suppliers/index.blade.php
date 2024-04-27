@@ -25,12 +25,12 @@
             <table id="sales-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>المعرف</th>
                     <th>الاسم</th>
                     <th>العنوان</th>
                     <th>بريد إلكتروني</th>
                     <th>رقم الهاتف</th>
-                    <th>Actions</th>
+                    <th>العمليات</th>
                 </tr>
                 </thead>
                 <tbody></tbody>

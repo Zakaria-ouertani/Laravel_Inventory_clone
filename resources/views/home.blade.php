@@ -25,7 +25,7 @@
             <div class="icon">
                 <i class="fa fa-user-secret"></i>
             </div>
-            <a href="/user" class="small-box-footer">المزيد<i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/user" class="small-box-footer">المزيد<i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
     @endif
@@ -41,7 +41,7 @@
             <div class="icon">
                 <i class="fa fa-list"></i>
             </div>
-            <a href="{{ route('categories.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('categories.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -55,7 +55,7 @@
             <div class="icon">
                 <i class="fa fa-cubes"></i>
             </div>
-            <a href="{{ route('products.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('products.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -70,7 +70,7 @@
             <div class="icon">
                 <i class="fa fa-users"></i>
             </div>
-            <a href="{{ route('customers.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('customers.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -90,7 +90,7 @@
             <div class="icon">
                 <i class="fa fa-signal"></i>
             </div>
-            <a href="{{ route('suppliers.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('suppliers.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -105,7 +105,7 @@
             <div class="icon">
                 <i class="fa fa-cart-plus"></i>
             </div>
-            <a href="{{ route('productsIn.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('productsIn.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -120,7 +120,7 @@
             <div class="icon">
                 <i class="fa fa-minus"></i>
             </div>
-            <a href="{{ route('productsOut.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('productsOut.index') }}" class="small-box-footer">المزيد <i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
     <!-- ./col -->

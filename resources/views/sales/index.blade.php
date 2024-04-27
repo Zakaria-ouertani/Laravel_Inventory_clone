@@ -25,7 +25,7 @@
             <table id="sales-table" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>المعرف</th>
                     <th>الاسم</th>
                     <th>العنوان</th>
                     <th>بريد إلكتروني</th>

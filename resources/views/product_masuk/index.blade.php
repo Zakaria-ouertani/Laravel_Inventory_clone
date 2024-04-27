@@ -21,7 +21,7 @@
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-success" ><i class="fa fa-plus"></i> Add New Purchase</a>
+            <a onclick="addForm()" class="btn btn-success" ><i class="fa fa-plus"></i> إضافة عملية شراء</a>
             <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger"><i class="fa fa-file-pdf-o"></i> <th>تحميل PDF</th></a>
             <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-primary"><i class="fa fa-file-excel-o"></i> <th>تحميل اكسل</th></a>
         </div>
@@ -34,12 +34,12 @@
             <table id="products-in-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>المعرف</th>
                     <th>المنتوجات</th>
                     <th>المزود</th>
                     <th>الكمية</th>
                     <th>التاريخ</th>
-                    <th>Actions</th>
+                    <th>العمليات</th>
                 </tr>
                 </thead>
                 <tbody></tbody>
@@ -65,12 +65,12 @@
             <table id="invoice" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>المعرف</th>
                     <th>المنتوجات</th>
                     <th>المزود</th>
                     <th>الكمية</th>
                     <th>التاريخ</th>
-                    <th>Action</th>
+                    <th>العمليات</th>
                 </tr>
                 </thead>
 

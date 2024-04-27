@@ -23,11 +23,11 @@
             <table id="user-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>المعرف</th>
                     <th>الاسم</th>
                     <th>بريد إلكتروني</th>
                     <th>Role</th>
-                    <th>Actions</th>
+                    <th>العمليات</th>
                 </tr>
                 </thead>
                 <tbody></tbody>
