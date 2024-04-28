@@ -9,14 +9,28 @@
 </head>
 
 <style>
-    #table-data {
-        border-collapse: collapse;
-        padding: 3px;
-    }
+        #table-data {
+            font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-    #table-data td, #table-data th {
-        border: 1px solid black;
-    }
+        #table-data td, #table-data th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #table-data tr:nth-child(even){background-color: #f2f2f2;}
+
+        #table-data tr:hover {background-color: #ddd;}
+
+        #table-data th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
 </style>
 
 <body>
@@ -36,57 +50,38 @@
     </table> -->
 
 
-        <table border="0" id="table-data" width="100%">
+        <table border="0" dir="rtl" id="table-data" width="100%">
             <tr>
-                <td width="70px"><b>Invoice</b></td>
-                <td width="">: ##{{ $product_keluar->id }}</td>
-                <td width="30px"><b>Created</b></td>
+                <td><b>فاتورة</b></td>
+                <td>: ##{{ $product_keluar->id }}</td>
+                <td><b>تاريخ التصدير</b></td>
                 <td>: {{ $product_keluar->tanggal }}</td>
             </tr>
 
             <tr>
-                <td><b>Contact</b></td>
+                <td><b>الهاتف</b></td>
                 <td>: {{ $product_keluar->customer->telepon }}</td>
-                <td><b>Address</b></td>
+                <td><b>العنوان</b></td>
                 <td>: {{ $product_keluar->customer->alamat }}</td>
             </tr>
 
             <tr>
-                <td><b>Customer</b></td>
+                <td><b>الزبون</b></td>
                 <td>: {{ $product_keluar->customer->nama }}</td>
-                <td><b>Email</b></td>
+                <td><b>البريد الالكتروني</b></td>
                 <td>: {{ $product_keluar->customer->email }}</td>
             </tr>
 
             <tr>
-                <td><b>Product</b></td>
+                <td><b>المنتوج</b></td>
                 <td >: {{ $product_keluar->product->nama }}</td>
-                <td><b>Quantity</b></td>
+                <td><b>الكمية</b></td>
                 <td >: {{ $product_keluar->qty }}</td>
             </tr>
 
         </table>
 
         {{--<hr  size="2px" color="black" align="left" width="45%">--}}
-
-
-        <table border="0" width="80%">
-            <tr align="right">
-                <td>Best Regard</td>
-            </tr>
-        </table>
-
-    <!-- <table border="0" width="80%">
-        <tr align="right">
-            <td><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Timothy_Spall_Signature.png" width="100px" height="100px"></td>
-        </tr>
-
-    </table> -->
-        <table border="0" width="80%">
-            <tr align="right">
-                <td>I M S</td>
-            </tr>
-        </table>
 </div>
 
 

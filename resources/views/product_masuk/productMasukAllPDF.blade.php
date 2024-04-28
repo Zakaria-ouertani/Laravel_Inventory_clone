@@ -16,7 +16,7 @@
 {{--<body>--}}
     <style>
         #product-masuk {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
             border-collapse: collapse;
             width: 100%;
         }
@@ -39,14 +39,14 @@
         }
     </style>
 
-    <table id="product-masuk" width="100%">
+    <table id="product-masuk" dir="rtl" width="100%">
         <thead>
         <tr>
-            <td>ID</td>
-            <td>Product</td>
-            <td>Supplier</td>
-            <td>Quantity</td>
-            <td>Date</td>
+            <td>المعرف</td>
+            <td>المنتوج</td>
+            <td>المزود</td>
+            <td>الكمية</td>
+            <td>التاريخ</td>
         </tr>
         </thead>
         @foreach($product_masuk as $p)

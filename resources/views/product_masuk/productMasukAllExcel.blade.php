@@ -39,25 +39,25 @@
         }
     </style>
 
-    <table id="product-masuk" width="100%">
+    <table dir="rtl" id="product-masuk" width="100%">
         <thead>
         <tr>
-            <td>ID</td>
-            <td>Product</td>
-            <td>Supplier</td>
-            <td>Quantity</td>
-            <td>Date</td>
+            <td>المنتوج</td>
+            <td>الكمية</td>
+            <td>التاريخ</td>
+            <td>المزود</td>
+            <td>المعرف</td>
         </tr>
         </thead>
         @foreach($product_masuk as $p)
             @if (Auth::id() == $p->owner_id)
                 <tbody>
                 <tr>
-                    <td>{{ $p->id }}</td>
                     <td>{{ $p->product->nama }}</td>
-                    <td>{{ $p->supplier->nama }}</td>
                     <td>{{ $p->qty }}</td>
                     <td>{{ $p->tanggal }}</td>
+                    <td>{{ $p->supplier->nama }}</td>
+                    <td>{{ $p->id }}</td>
                 </tr>
                 </tbody>
             @endif

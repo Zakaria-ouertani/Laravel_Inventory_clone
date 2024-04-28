@@ -2,8 +2,8 @@
 {{--<html lang="en">--}}
 {{--<head>--}}
 {{--<meta charset="UTF-8">--}}
-{{--<meta name="viewport"--}}
-{{--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">--}}
+{{--<meta name="viewport">--}}
+{{--<content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">--}}
 {{--<meta http-equiv="X-UA-Compatible" content="ie=edge">--}}
 {{--<link rel="stylesheet" href="{{ asset('assets/bower_components/bootstrap/dist/css/bootstrap.min.css ')}}">--}}
 {{--<!-- Font Awesome -->--}}
@@ -16,7 +16,7 @@
 {{--<body>--}}
 <style>
     #categories {
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 100%;
     }
@@ -39,11 +39,11 @@
     }
 </style>
 
-<table id="categories" width="100%">
+<table dir="rtl" id="categories" width="100%">
     <thead>
     <tr>
-        <td>ID</td>
-        <td>Name</td>
+        <td>المعرف</td>
+        <td>االاسم</td>
     </tr>
     </thead>
     @foreach($categories as $c)

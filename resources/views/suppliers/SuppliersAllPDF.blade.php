@@ -16,7 +16,7 @@
 {{--<body>--}}
 <style>
     #categories {
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 100%;
     }
@@ -37,19 +37,22 @@
         background-color: #4CAF50;
         color: white;
     }
+    /* body { */
+    /*     font-family: DejaVu Sans; */
+    /* } */
 </style>
 
-<table id="categories" width="100%">
+<table dir="rtl" id="categories" width="100%">
     <thead>
     <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Address</td>
-        <td>Email</td>
+        <td>المعرف</td>
+        <td>االاسم</td>
+        <td>العنوان</td>
+        <td>البريد إلكتروني</td>
     </tr>
     </thead>
     @foreach($suppliers as $s)
-        @if (Auth::id() == $s->owner_id)
+        @if (Auth->id() == $s->owner_id)
             <tbody>
             <tr>
                 <td>{{ $s->id }}</td>

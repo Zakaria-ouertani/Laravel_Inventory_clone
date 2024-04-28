@@ -39,19 +39,19 @@
     }
 </style>
 
-<table id="categories" width="100%">
+<table dir="rtl" id="categories" width="100%">
     <thead>
     <tr>
-        <td>ID</td>
-        <td>Name</td>
+        <td>االاسم</td>
+        <td>المعرف</td>
     </tr>
     </thead>
     @foreach($categories as $c)
         @if (Auth::id() == $c->owner_id)
             <tbody>
             <tr>
-                <td>{{ $c->id }}</td>
                 <td>{{ $c->name }}</td>
+                <td>{{ $c->id }}</td>
             </tr>
             </tbody>
         @endif

@@ -8,14 +8,28 @@
 </head>
 
 <style>
-    #table-data {
-        border-collapse: collapse;
-        padding: 3px;
-    }
+        #table-data {
+            font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-    #table-data td, #table-data th {
-        border: 1px solid black;
-    }
+        #table-data td, #table-data th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #table-data tr:nth-child(even){background-color: #f2f2f2;}
+
+        #table-data tr:hover {background-color: #ddd;}
+
+        #table-data th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
 </style>
 
 <body>
@@ -35,32 +49,32 @@
     </table> -->
 
 
-    <table border="0" id="table-data" width="100%">
+    <table border="0" dir="rtl" id="table-data" width="100%">
         <tr>
-            <td width="70px"><b>Invoice</b></td>
+            <td width="70px"><b>فاتورة</b></td>
             <td width="">: {{ $product_masuk->id }}</td>
-            <td width="30px"><b>Created</b></td>
+            <td width="30px"><b>تاريخ التصدير</b></td>
             <td>: {{ $product_masuk->tanggal }}</td>
         </tr>
 
         <tr>
-            <td><b>Contact</b></td>
+            <td><b>الهاتف</b></td>
             <td>: {{ $product_masuk->supplier->telepon }}</td>
-            <td><b>Address</b></td>
+            <td><b>العنوان</b></td>
             <td>: {{ $product_masuk->supplier->alamat }}</td>
         </tr>
 
         <tr>
             <td><b>Supplier</b></td>
             <td>: {{ $product_masuk->supplier->nama }}</td>
-            <td><b>Email</b></td>
+            <td><b>البريد الالكتروني</b></td>
             <td>: {{ $product_masuk->supplier->email }}</td>
         </tr>
 
         <tr>
-            <td><b>Product</b></td>
+            <td><b>المنتوج</b></td>
             <td >: {{ $product_masuk->product->nama }}</td>
-            <td><b>Quantity</b></td>
+            <td><b>الكمية</b></td>
             <td >: {{ $product_masuk->qty }}</td>
         </tr>
 

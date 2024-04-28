@@ -39,24 +39,24 @@
     }
 </style>
 
-<table id="categories" width="100%">
+<table dir="rtl" id="categories" width="100%">
     <thead>
 
     <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Address</td>
-        <td>Email</td>
+        <td>البريد إلكتروني</td>
+        <td>االاسم</td>
+        <td>المعرف</td>
+        <td>العنوان</td>
     </tr>
     </thead>
     @foreach($customers as $c)
         <tbody>
         @if (Auth::id() == $c->owner_id)
             <tr>
-                <td>{{ $c->id }}</td>
-                <td>{{ $c->nama }}</td>
-                <td>{{ $c->alamat }}</td>
                 <td>{{ $c->email }}</td>
+                <td>{{ $c->alamat }}</td>
+                <td>{{ $c->nama }}</td>
+                <td>{{ $c->id }}</td>
             </tr>
         @endif
         </tbody>
