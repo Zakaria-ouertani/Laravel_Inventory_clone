@@ -17,14 +17,14 @@
 
                     <div class="box-body">
                         <div class="form-group">
-                            <label >Name</label>
+                            <label>الاسم</label>
                             <input type="text" class="form-control" id="name" name="name"  autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
                     </div>
                     <!-- /.box-body -->
 
-                </div><!-- Log on to codeastro.com for more projects! -->
+                </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>

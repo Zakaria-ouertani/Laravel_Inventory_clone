@@ -12,7 +12,7 @@
     }
 </style>
 <div class="row justify-content-end">
-    <!-- Log on to codeastro.com for more projects! -->
+   
     @if (Auth::id() == '1')
     <div class="col-lg-3 col-cs-6 float-right">
         <!-- small box -->
@@ -74,7 +74,7 @@
         </div>
     </div>
     <!-- ./col -->
-<!-- Log on to codeastro.com for more projects! -->
+
 
 
     
@@ -125,7 +125,7 @@
     </div>
     <!-- ./col -->
     <div id="container" class=" col-cs-6 float-right"></div>
-</div><!-- Log on to codeastro.com for more projects! -->
+</div>
 
 @endsection
 

@@ -1,5 +1,5 @@
 <div class="modal fade" id="modal-form" tabindex="1" role="dialog" aria-hidden="true" data-backdrop="static">
-    <div class="modal-dialog"><!-- Log on to codeastro.com for more projects! -->
+    <div class="modal-dialog">
         <div class="modal-content">
             <form  id="form-item" method="post" class="form-horizontal" data-toggle="validator" enctype="multipart/form-data" >
                 {{ csrf_field() }} {{ method_field('POST') }}
@@ -17,25 +17,25 @@
 
                     <div class="box-body">
                         <div class="form-group">
-                            <label >Products</label>
+                            <label>المنتوج</label>
                             {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Product --', 'id' => 'product_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Customer</label>
+                            <label>الزبون</label>
                             {!! Form::select('customer_id', $customers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Customer --', 'id' => 'customer_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Quantity</label>
+                            <label>الكمية</label>
                             <input type="text" class="form-control" id="qty" name="qty" required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Date</label>
+                            <label>التاريخ</label>
                             <input data-date-format='yyyy-mm-dd' type="text" class="form-control" id="tanggal" name="tanggal"   required>
                             <span class="help-block with-errors"></span>
                         </div>
@@ -53,7 +53,7 @@
             </form>
         </div>
         <!-- /.modal-content -->
-    </div><!-- Log on to codeastro.com for more projects! -->
+    </div>
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->

@@ -35,21 +35,6 @@
 
 <body>
 <div class="invoice-box">
-    <!-- <table cellpadding="0" cellspacing="0">
-        <tr class="top">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td class="title">
-                            <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;">
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table> -->
-
-
         <table border="0" dir="rtl" id="table-data" width="100%">
             <tr>
                 <td><b>فاتورة</b></td>
@@ -81,71 +66,6 @@
 
         </table>
 
-        {{--<hr  size="2px" color="black" align="left" width="45%">--}}
 </div>
-
-
-
-
-
-
-<!-- New Invoice Starts Here -->
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-    		<div class="invoice-title">
-    			<h2>Invoice</h2><h3 class="pull-right">Order # {{ $product_keluar->id }}</h3>
-    		</div>
-    		<hr>
-    		<div class="row">
-    			<div class="col-xs-6">
-    				<address>
-    				<strong>Billed To:</strong><br>
-                    {{ $product_keluar->customer->nama }}<br>
-                    {{ $product_keluar->customer->alamat }}<br>
-                    {{ $product_keluar->customer->email }}<br>
-                    {{ $product_keluar->customer->telepon }}
-    				</address>
-    			</div>
-    			<div class="col-xs-6 text-right">
-    				<address>
-    					<strong>Order Date:</strong><br>
-    					{{ $product_keluar->tanggal }}<br><br>
-    				</address>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    
-    <div class="row">
-    	<div class="col-md-12">
-    		<div class="panel panel-default">
-    			<div class="panel-heading">
-    				<h3 class="panel-title"><strong>Order Summary</strong></h3>
-    			</div>
-    			<div class="panel-body">
-    				<div class="table-responsive">
-    					<table class="table table-bordered table-condensed">
-    						<thead>
-                                <tr>
-        							<td><strong>Product Name</strong></td>
-        							<td class="text-center"><strong>Total Quantity</strong></td>
-                                </tr>
-    						</thead>
-    						<tbody>
-    							<tr>
-    								<td>{{ $product_keluar->product->nama }}</td>
-    								<td class="text-center">{{ $product_keluar->qty }}</td>
-    							</tr>
-    							
-    						</tbody>
-    					</table>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-</div> -->
-
 
 </body>

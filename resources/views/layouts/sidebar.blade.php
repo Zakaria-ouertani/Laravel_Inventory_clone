@@ -14,7 +14,7 @@
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
-        <!-- Log on to codeastro.com for more projects! -->
+       
         <!-- search form (Optional) -->
         <!-- <form action="#" method="get" class="sidebar-form">
             <div class="input-group">

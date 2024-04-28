@@ -17,25 +17,25 @@
 
                     <div class="box-body">
                         <div class="form-group">
-                            <label >Name</label>
+                            <label>الاسم</label>
                             <input type="text" class="form-control" id="nama" name="nama"  autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Address</label>
+                            <label>العنوان</label>
                             <input type="text" class="form-control" id="alamat" name="alamat"   required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Email</label>
+                            <label>البريد الالكتروني</label>
                             <input type="email" class="form-control" id="email" name="email"   required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Phone</label>
+                            <label>رقم الهاتف</label>
                             <input type="text" class="form-control" id="telepon" name="telepon"   required>
                             <span class="help-block with-errors"></span>
                         </div>

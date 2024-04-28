@@ -52,7 +52,7 @@
     </tr>
     </thead>
     @foreach($suppliers as $s)
-        @if (Auth->id() == $s->owner_id)
+        @if (Auth::id() == $s->owner_id)
             <tbody>
             <tr>
                 <td>{{ $s->id }}</td>
