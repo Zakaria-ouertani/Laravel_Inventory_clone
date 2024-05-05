@@ -18,19 +18,19 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>المنتوج</label>
-                            {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Product --', 'id' => 'product_id', 'required']) !!}
+                            {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- المنتوج --', 'id' => 'product_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label>المزود</label>
-                            {!! Form::select('supplier_id', $suppliers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Supplier --', 'id' => 'supplier_id', 'required']) !!}
+                            {!! Form::select('supplier_id', $suppliers, null, ['class' => 'form-control select', 'placeholder' => '-- المزود --', 'id' => 'supplier_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label>الكمية</label>
-                            <input type="text" class="form-control" id="qty" name="qty" required>
+                            <input type="number" class="form-control" id="qty" name="qty" required>
                             <span class="help-block with-errors"></span>
                         </div>
 
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">إلغاء</button>
                     <button type="submit" class="btn btn-success">ارسال</button>
                 </div>
 

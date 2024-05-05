@@ -43,7 +43,6 @@
     <thead>
     <tr>
         <td>االاسم</td>
-        <td>المعرف</td>
     </tr>
     </thead>
     @foreach($categories as $c)
@@ -51,7 +50,6 @@
             <tbody>
             <tr>
                 <td>{{ $c->name }}</td>
-                <td>{{ $c->id }}</td>
             </tr>
             </tbody>
         @endif

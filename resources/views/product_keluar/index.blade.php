@@ -29,8 +29,7 @@
             <table id="products-out-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>المعرف</th>
-                    <th>المزود</th>
+                    <th>المنتوجات</th>
                     <th>الزبون</th>
                     <th>الكمية</th>
                     <th>التاريخ</th>
@@ -62,8 +61,7 @@
             <table id="invoice" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>المعرف</th>
-                    <th>المزود</th>
+                    <th>المنتوجات</th>
                     <th>الزبون</th>
                     <th>الكمية</th>
                     <th>التاريخ</th>
@@ -73,7 +71,6 @@
 
                 @foreach($invoice_data as $i)
                     <tbody>
-                        <td>{{ $i->id }}</td>
                         <td>{{ $i->product->nama }}</td>
                         <td>{{ $i->customer->nama }}</td>
                         <td>{{ $i->qty }}</td>
@@ -164,7 +161,6 @@
             serverSide: true,
             ajax: "{{ route('api.productsOut') }}",
             columns: [
-                {data: 'id', name: 'id'},
                 {data: 'products_name', name: 'products_name'},
                 {data: 'customer_name', name: 'customer_name'},
                 {data: 'qty', name: 'qty'},
@@ -223,7 +219,7 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'تم!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -231,7 +227,7 @@
                     },
                     error : function () {
                         swal({
-                            title: 'Oops...',
+                            title: 'فشل',
                             text: data.message,
                             type: 'error',
                             timer: '1500'
@@ -260,7 +256,7 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'تم!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'
@@ -268,7 +264,7 @@
                         },
                         error : function(data){
                             swal({
-                                title: 'Oops...',
+                                title: 'فشل',
                                 text: data.message,
                                 type: 'error',
                                 timer: '1500'

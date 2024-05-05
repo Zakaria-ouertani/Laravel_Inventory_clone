@@ -30,20 +30,20 @@
 
                         <div class="form-group">
                             <label>الكمية</label>
-                            <input type="text" class="form-control" id="qty" name="qty"   required>
+                            <input type="number" class="form-control" id="qty" name="qty"   required>
                             <span class="help-block with-errors"></span>
                         </div>
 
 
                         <div class="form-group">
                             <label>الصورة</label>
-                            <input type="file" class="form-control" id="image" name="image" >
+                            <input type="file" class="form-control" id="image" name="image">
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label>الفئة</label>
-                            {!! Form::select('category_id', $category, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Category --', 'id' => 'category_id', 'required']) !!}
+                            {!! Form::select('category_id', $category, null, ['class' => 'form-control select', 'placeholder' => '-- الفئة --', 'id' => 'category_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">إلغاء</button>
                     <button type="submit" class="btn btn-success">ارسال</button>
                 </div>
 

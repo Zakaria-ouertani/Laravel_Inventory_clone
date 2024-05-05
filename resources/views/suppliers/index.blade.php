@@ -25,7 +25,6 @@
             <table id="sales-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>المعرف</th>
                     <th>الاسم</th>
                     <th>العنوان</th>
                     <th>بريد إلكتروني</th>
@@ -64,7 +63,6 @@
             serverSide: true,
             ajax: "{{ route('api.suppliers') }}",
             columns: [
-                {data: 'id', name: 'id'},
                 {data: 'nama', name: 'nama'},
                 {data: 'alamat', name: 'alamat'},
                 {data: 'email', name: 'email'},
@@ -123,7 +121,7 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'تم!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -131,7 +129,7 @@
                     },
                     error : function () {
                         swal({
-                            title: 'Oops...',
+                            title: 'فشل',
                             text: data.message,
                             type: 'error',
                             timer: '1500'
@@ -160,7 +158,7 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'تم!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'
@@ -168,7 +166,7 @@
                         },
                         error : function(data){
                             swal({
-                                title: 'Oops...',
+                                title: 'فشل',
                                 text: data.message,
                                 type: 'error',
                                 timer: '1500'

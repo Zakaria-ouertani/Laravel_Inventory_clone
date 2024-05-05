@@ -46,7 +46,6 @@
         <td>الكمية</td>
         <td>الزبون</td>
         <td>المنتوج</td>
-        <td>المعرف</td>
     </tr>
     </thead>
     @foreach($product_keluar as $p)
@@ -57,7 +56,6 @@
                 <td>{{ $p->qty }}</td>
                 <td>{{ $p->customer->nama }}</td>
                 <td>{{ $p->product->nama }}</td>
-                <td>{{ $p->id }}</td>
             </tr>
             </tbody>
         @endif

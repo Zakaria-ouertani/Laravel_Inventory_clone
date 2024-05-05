@@ -20,7 +20,7 @@
             padding: 8px;
         }
 
-        #table-data tr:nth-child(even){background-color: #f2f2f2;}
+        #table-data td:nth-child(odd){background-color: #f2f2f2;}
 
         #table-data tr:hover {background-color: #ddd;}
 
@@ -37,29 +37,27 @@
 <div class="invoice-box">
         <table border="0" dir="rtl" id="table-data" width="100%">
             <tr>
-                <td><b>فاتورة</b></td>
-                <td>: ##{{ $product_keluar->id }}</td>
                 <td><b>تاريخ التصدير</b></td>
                 <td>: {{ $product_keluar->tanggal }}</td>
-            </tr>
-
-            <tr>
                 <td><b>الهاتف</b></td>
                 <td>: {{ $product_keluar->customer->telepon }}</td>
+            </tr>
+
+            <tr>
                 <td><b>العنوان</b></td>
                 <td>: {{ $product_keluar->customer->alamat }}</td>
-            </tr>
-
-            <tr>
                 <td><b>الزبون</b></td>
                 <td>: {{ $product_keluar->customer->nama }}</td>
-                <td><b>البريد الالكتروني</b></td>
-                <td>: {{ $product_keluar->customer->email }}</td>
             </tr>
 
             <tr>
+                <td><b>البريد الالكتروني</b></td>
+                <td>: {{ $product_keluar->customer->email }}</td>
                 <td><b>المنتوج</b></td>
                 <td >: {{ $product_keluar->product->nama }}</td>
+            </tr>
+
+            <tr>
                 <td><b>الكمية</b></td>
                 <td >: {{ $product_keluar->qty }}</td>
             </tr>

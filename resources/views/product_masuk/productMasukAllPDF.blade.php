@@ -42,7 +42,6 @@
     <table id="product-masuk" dir="rtl" width="100%">
         <thead>
         <tr>
-            <td>المعرف</td>
             <td>المنتوج</td>
             <td>المزود</td>
             <td>الكمية</td>
@@ -53,7 +52,6 @@
             @if (Auth::id() == $p->owner_id)
                 <tbody>
                 <tr>
-                    <td>{{ $p->id }}</td>
                     <td>{{ $p->product->nama }}</td>
                     <td>{{ $p->supplier->nama }}</td>
                     <td>{{ $p->qty }}</td>

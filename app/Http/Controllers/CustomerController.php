@@ -58,7 +58,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Customer Created'
+            'message'    => 'تمت اظافة الزبون بنجاح'
         ]);
 
     }

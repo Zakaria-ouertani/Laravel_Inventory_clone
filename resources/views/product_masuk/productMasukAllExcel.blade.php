@@ -46,7 +46,6 @@
             <td>الكمية</td>
             <td>التاريخ</td>
             <td>المزود</td>
-            <td>المعرف</td>
         </tr>
         </thead>
         @foreach($product_masuk as $p)
@@ -57,7 +56,6 @@
                     <td>{{ $p->qty }}</td>
                     <td>{{ $p->tanggal }}</td>
                     <td>{{ $p->supplier->nama }}</td>
-                    <td>{{ $p->id }}</td>
                 </tr>
                 </tbody>
             @endif

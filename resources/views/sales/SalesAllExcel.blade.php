@@ -45,7 +45,6 @@
         <td>البريد إلكتروني</td>
         <td>العنوان</td>
         <td>االاسم</td>
-        <td>المعرف</td>
     </tr>
     </thead>
     @foreach($sales as $s)
@@ -55,7 +54,6 @@
                     <td>{{ $s->email }}</td>
                     <td>{{ $s->alamat }}</td>
                     <td>{{ $s->nama }}</td>
-                    <td>{{ $s->id }}</td>
                 </tr>
         </tbody>
         @endif

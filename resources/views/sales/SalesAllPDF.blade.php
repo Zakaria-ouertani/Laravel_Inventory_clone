@@ -42,7 +42,6 @@
 <table dir="rtl" id="categories" width="100%">
     <thead>
     <tr>
-        <td>المعرف</td>
         <td>االاسم</td>
         <td>العنوان</td>
         <td>البريد إلكتروني</td>
@@ -52,7 +51,6 @@
         @if (Auth::id() == $s->owner_id)
             <tbody>
             <tr>
-                <td>{{ $s->id }}</td>
                 <td>{{ $s->nama }}</td>
                 <td>{{ $s->alamat }}</td>
                 <td>{{ $s->email }}</td>

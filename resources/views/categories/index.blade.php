@@ -26,7 +26,6 @@
             <table id="categories-table" class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>المعرف</th>
                     <th>الاسم</th>
                     <th>العمليات</th>
                 </tr>
@@ -60,7 +59,6 @@
             serverSide: true,
             ajax: "{{ route('api.categories') }}",
             columns: [
-                {data: 'id', name: 'id'},
                 {data: 'name', name: 'name'},
                 {data: 'action', name: 'action', orderable: false, searchable: false}
             ]
@@ -71,7 +69,7 @@
             $('input[name=_method]').val('POST');
             $('#modal-form').modal('show');
             $('#modal-form form')[0].reset();
-            $('.modal-title').text('Add Categories');
+            $('.modal-title').text('اظافة فئة');
         }
 
         function editForm(id) {
@@ -84,7 +82,7 @@
                 dataType: "JSON",
                 success: function(data) {
                     $('#modal-form').modal('show');
-                    $('.modal-title').text('Edit Categories');
+                    $('.modal-title').text('');
 
                     $('#id').val(data.id);
                     $('#name').val(data.name);
@@ -113,7 +111,7 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'تم!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -121,7 +119,7 @@
                     },
                     error : function () {
                         swal({
-                            title: 'Oops...',
+                            title: 'فشل',
                             text: data.message,
                             type: 'error',
                             timer: '1500'
@@ -150,7 +148,7 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'تم!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'
@@ -158,7 +156,7 @@
                         },
                         error : function(data){
                             swal({
-                                title: 'Oops...',
+                                title: 'فشل',
                                 text: data.message,
                                 type: 'error',
                                 timer: '1500'

@@ -105,7 +105,7 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'تم!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -113,7 +113,7 @@
                     },
                     error : function () {
                         swal({
-                            title: 'Oops...',
+                            title: 'فشل',
                             text: data.message,
                             type: 'error',
                             timer: '1500'
@@ -142,7 +142,7 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'تم!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'
@@ -150,7 +150,7 @@
                         },
                         error : function(data){
                             swal({
-                                title: 'Oops...',
+                                title: 'فشل',
                                 text: data.message,
                                 type: 'error',
                                 timer: '1500'
